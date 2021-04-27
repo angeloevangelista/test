@@ -1,0 +1,25 @@
+<table class="totalizer-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Quantidade</th>
+      <th>Valor Total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let dado of dadosEmpresas">
+      <td>
+        <strong>{{ dado.fonte }}</strong>
+      </td>
+      <td>{{ dado.quantidade }}</td>
+      <td>{{ dado.valorTotal | currency: "BRL" }}</td>
+    </tr>
+
+    <tr>
+      <td><strong>Total</strong></td>
+      <td>{{ quantidadeTotal }}</td>
+      <td>{{ valorTotal | currency: "BRL":true }}</td>
+    </tr>
+  </tbody>
+</table>
